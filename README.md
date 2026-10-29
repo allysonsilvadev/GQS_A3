@@ -1,6 +1,14 @@
 ﻿# Grupo Los Bagres
 
-**Integrante registrado:** Allyson da Silva Pereira — RA 942516484
+## Integrantes registrados:
+
+ Allyson da Silva Pereira (RA: 942516484)
+ 
+ Diogo Benedik de Oliveira (RA: 942519877)
+ 
+ Rodrigo Cassol (RA: 942510010)
+ 
+ Vinicius Gabriel Rodrigues Medrades (RA: 942618071)
 
 # GQS A3 — Entrega 2
 

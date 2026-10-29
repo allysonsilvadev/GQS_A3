@@ -12,7 +12,7 @@ from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
 
 SITE = "https://www.carrefour.com.br/"
-PASTA_EVIDENCIAS = Path(__file__).resolve().parents[1] / "Evidencias"
+PASTA_EVIDENCIAS = Path(__file__).resolve().parents[1] / "evidencias"
 
 
 def mostrar_etapa(mensagem):
@@ -21,6 +21,7 @@ def mostrar_etapa(mensagem):
 
 
 def aceitar_cookies(navegador):
+    time.sleep(3)
     botoes = navegador.find_elements(
         By.XPATH,
         "//*[self::button or self::a][contains(normalize-space(.), "
@@ -77,7 +78,7 @@ def test_ct01_busca_por_palavra_valida(termo_busca):
         )
         mostrar_etapa("Página inicial do Carrefour carregada.")
         aceitar_cookies(navegador)
-        time.sleep(3)
+        
         # Print 1: Salva a evidência da página inicial carregada
         navegador.save_screenshot(str(pasta_teste / "1_pagina_inicial.png"))
 

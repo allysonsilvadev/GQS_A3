@@ -14,24 +14,52 @@
 
 ## Ideia do projeto
 
-Este projeto está sendo desenvolvido para a entrega parcial da avaliação A3. O objetivo é explorar testes automatizados da busca de produtos no site público do [Carrefour Brasil](https://www.carrefour.com.br/), usando Python, Selenium e Pytest.
-
-O sistema testado é a busca do e-commerce. Os cenários verificam uma pesquisa válida e uma pesquisa com erro de digitação. O escopo atual não inclui login, carrinho ou compra.
+Este projeto está sendo desenvolvido para a entrega parcial da avaliação A3. O objetivo é explorar testes automatizados da busca de produtos no site público do [Demoblaze](https://www.demoblaze.com/), usando Python, Selenium e Pytest.
 
 ## Cenários atuais
 
-- **CT-01 — Busca válida:** procura “Air Fryer” e confere se a página apresenta produtos com título, imagem e preço. Salva uma captura dos resultados.
-- **CT-02 — Erro de digitação:** procura “Liquedificador”. O Carrefour deve informar que não encontrou produtos e sugerir a grafia “liquidificador”. Salva uma captura da resposta.
+- **CT-01: Navegação de Categorias (Laptops):** Acessar a página inicial, clicar na aba "Laptops" no menu lateral e validar se a vitrine atualiza para exibir apenas notebooks (ex: Sony vaio, MacBook).
+
+- **CT-02: Visualização de Detalhes do Produto:** Clicar em um produto da vitrine inicial (ex: Samsung galaxy s6) e validar se a página de detalhes é carregada com sucesso, exibindo a imagem, o título do produto, o preço e o botão de compra.
+
+- **CT-03: Adicionar Produto ao Carrinho:** 
+
+- **CT-04: Validação de Itens no Carrinho:** Após adicionar um item, acessar o menu superior "Cart" e validar se o produto aparece na tabela de compras com o título e o preço correspondentes ao item escolhido.
+
+- **CT-05: Exclusão de Produto do Carrinho:** Dentro do menu "Cart", clicar no botão "Delete" ao lado de um produto recém-adicionado e validar se a tabela é limpa e se o valor total da compra é atualizado.
+
+- **CT-06: Formulário de Contato (Sem Caracteres Especiais):** Acessar o menu "Contact", preencher o formulário informando e-mail, nome e uma mensagem simples sem pontuações ou acentos (ex: testando com a palavra "geladeira"). Clicar em "Send message" e validar o alerta "Thanks for the message!!".
+
+- **CT-07: Formulário de Contato (Com Caracteres Especiais):** Acessar o menu "Contact" e preencher o formulário utilizando uma mensagem com acentuação e cedilha (ex: testando com "coração de galinha"). Validar se o sistema suporta o envio e retorna o alerta de sucesso.
+
+- **CT-08: Cadastro de Usuário (Sign up) Bloqueado:** Acessar o menu "Sign up", tentar registrar um nome de usuário que sabidamente já existe no banco de dados da loja e validar se o sistema barra a criação exibindo o alerta "This user already exist.".
+
+- **CT-09: Login com Credenciais Incorretas** Acessar o menu "Log in", preencher um usuário ou senha inválidos e tentar entrar. Validar se o sistema rejeita o acesso exibindo o alerta "Wrong password." ou "User does not exist.".
+
+- **CT-10: Finalização de Compra (Place Order)** Com um produto no carrinho, clicar no botão "Place Order". Preencher o formulário de endereço e cartão de crédito (testando a inserção de dados com e sem caracteres especiais) e clicar em "Purchase". Validar se o modal verde de confirmação "Thank you for your purchase!" é gerado contendo o ID exclusivo do pedido.
 
 ## Organização atual
 
 ```text
 GQS A3 ENTREGA 2/
 ├── tests/
+│   ├── __init__.py              # Transforma a pasta em módulo para os imports
 │   ├── test_ct01_busca_valida.py
 │   └── test_ct02_erro_digitacao.py
-├── evidencias/          # capturas geradas durante os testes
-├── .venv/               # ambiente virtual local, não enviado ao GitHub
+├── Evidencias/                  # Pasta gerada dinamicamente pela automação (ignorada no Git)
+│   ├── CT-01/
+│   │   ├── CelularX_2026-10-28_20-55-10/
+│   │   │   ├── README.txt
+│   │   │   ├── 1_pagina_inicial.png
+│   │   │   ├── 2_termo_digitado.png
+│   │   │   └── 3_resultados.png
+│   │   └── NotebookY_2026-10-28_20-55-45/
+│   │       ├── README.txt
+│   │       └── ...
+│   └── CT-02/
+│       └── ...
+├── .venv/                       # Ambiente virtual Python (ignorado no Git)
+├── main.py                      # Programa centralizador que executa os testes
 ├── requirements.txt
 ├── pytest.ini
 ├── .gitignore

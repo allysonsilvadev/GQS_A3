@@ -11,10 +11,10 @@ import sys
 try:
     import tests.test_ct01_categorias as ct01
     import tests.test_ct02_detalhes_produto as ct02
-
+    
     # Descomente os imports abaixo conforme formos criando os novos arquivos:
-    import tests.test_ct03_adicionar_carrinho as ct03
-    import tests.test_ct04_validar_carrinho as ct04
+    # import tests.test_ct03_adicionar_carrinho as ct03
+    # import tests.test_ct04_validar_carrinho as ct04
     # import tests.test_ct05_excluir_carrinho as ct05
     # import tests.test_ct06_ct07_contato as ct_contato  # Mesma função para CT-06 e CT-07
     # import tests.test_ct08_cadastro_existente as ct08
@@ -36,12 +36,12 @@ def executar_hub_testes():
     # -----------------------------------------------------------------
     print("\n>>> [Executando] CT-01: Navegação de Categorias")
     try:
-        # Teste padrão exigido no CT-01 (Laptops), lembrando, é importante digitar a categoria e o produto esperado, favor não esquecer.
+        # Teste padrão exigido no CT-01 (Laptops)
         ct01.test_ct01_navegar_categoria(
-            categoria="Laptops",
+            categoria="Laptops", 
             produto_esperado="Sony vaio i5"
         )
-        # Caso o analista de QA queira testar outra categoria com a mesma função, use o padrão a seguir:
+        # Caso o analista de QA queira testar outra categoria com a mesma função:
         # ct01.test_ct01_navegar_categoria(categoria="Monitors", produto_esperado="Apple monitor 24")
     except Exception as e:
         print(f"[Falha no CT-01]: {e}")
@@ -60,22 +60,22 @@ def executar_hub_testes():
         print(f"[Falha no CT-02]: {e}")
 
     # -----------------------------------------------------------------
-    # CT-03: Adicionar Produto ao Carrinho
+    # CT-03: Adicionar Produto ao Carrinho (Futuro)
     # -----------------------------------------------------------------
-    print("\n>>> [Executando] CT-03: Adicionar Produto ao Carrinho")
-    try:
-        ct03.test_ct03_adicionar_ao_carrinho(nome_produto="Samsung galaxy s6")
-    except Exception as e:
-        print(f"[Falha no CT-03]: {e}")
+    # print("\n>>> [Executando] CT-03: Adicionar Produto ao Carrinho")
+    # try:
+    #     ct03.test_ct03_adicionar_ao_carrinho(nome_produto="Samsung galaxy s6")
+    # except Exception as e:
+    #     print(f"[Falha no CT-03]: {e}")
 
     # -----------------------------------------------------------------
-    # CT-04: Validação de Itens no Carrinho
+    # CT-04: Validação de Itens no Carrinho (Futuro)
     # -----------------------------------------------------------------
-    print("\n>>> [Executando] CT-04: Validação de Itens no Carrinho")
-    try:
-        ct04.test_ct04_validar_item_no_carrinho(nome_produto="Samsung galaxy s6")
-    except Exception as e:
-        print(f"[Falha no CT-04]: {e}")
+    # print("\n>>> [Executando] CT-04: Validação de Itens no Carrinho")
+    # try:
+    #     ct04.test_ct04_validar_item_no_carrinho(nome_produto="Samsung galaxy s6")
+    # except Exception as e:
+    #     print(f"[Falha no CT-04]: {e}")
 
     # -----------------------------------------------------------------
     # CT-05: Exclusão de Produto do Carrinho (Futuro)

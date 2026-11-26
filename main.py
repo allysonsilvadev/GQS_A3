@@ -10,7 +10,6 @@ import sys
 # =====================================================================
 try:
     import tests.test_ct01_categorias as ct01
-<<<<<<< HEAD
     import tests.test_ct04_validar_carrinho as ct02
     import tests.test_ct03_adicionar_carrinho as ct03
     import tests.test_ct04_validar_carrinho as ct04
@@ -19,18 +18,6 @@ try:
     import tests.test_ct08_cadastro_existente as ct08
     import tests.test_ct09_login_invalido as ct09
     import tests.test_ct10_finalizar_compra as ct10
-=======
-    import tests.test_ct02_detalhes_produto as ct02
-    
-    # Descomente os imports abaixo conforme formos criando os novos arquivos:
-    # import tests.test_ct03_adicionar_carrinho as ct03
-    # import tests.test_ct04_validar_carrinho as ct04
-    # import tests.test_ct05_excluir_carrinho as ct05
-    # import tests.test_ct06_ct07_contato as ct_contato  # Mesma função para CT-06 e CT-07
-    # import tests.test_ct08_cadastro_existente as ct08
-    # import tests.test_ct09_login_invalido as ct09
-    # import tests.test_ct10_finalizar_compra as ct10
->>>>>>> 94625309c163ae7d096d33ea488685f0a5f398f6
 except ImportError as e:
     print(f"[Erro Crítico] Falha ao importar módulos da pasta 'tests/'. Detalhe: {e}")
     print("Verifique se o arquivo '__init__.py' existe dentro da pasta 'tests/'.")

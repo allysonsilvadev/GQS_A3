@@ -73,20 +73,20 @@ def executar_hub_testes():
     # -----------------------------------------------------------------
     # CT-03: Adicionar Produto ao Carrinho (Futuro)
     # -----------------------------------------------------------------
-    # print("\n>>> [Executando] CT-03: Adicionar Produto ao Carrinho")
-    # try:
-    #     ct03.test_ct03_adicionar_ao_carrinho(nome_produto="Samsung galaxy s6")
-    # except Exception as e:
-    #     print(f"[Falha no CT-03]: {e}")
+    print("\n>>> [Executando] CT-03: Adicionar Produto ao Carrinho")
+    try:
+        ct03.test_ct03_adicionar_ao_carrinho(nome_produto="Samsung galaxy s6")
+    except Exception as e:
+        print(f"[Falha no CT-03]: {e}")
 
     # -----------------------------------------------------------------
     # CT-04: Validação de Itens no Carrinho (Futuro)
     # -----------------------------------------------------------------
-    # print("\n>>> [Executando] CT-04: Validação de Itens no Carrinho")
-    # try:
-    #     ct04.test_ct04_validar_item_no_carrinho(nome_produto="Samsung galaxy s6")
-    # except Exception as e:
-    #     print(f"[Falha no CT-04]: {e}")
+    print("\n>>> [Executando] CT-04: Validação de Itens no Carrinho")
+    try:
+        ct04.test_ct04_validar_item_no_carrinho(nome_produto="Samsung galaxy s6")
+    except Exception as e:
+        print(f"[Falha no CT-04]: {e}")
 
     # -----------------------------------------------------------------
     # CT-05: Exclusão de Produto do Carrinho (Futuro)

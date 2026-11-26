@@ -10,8 +10,8 @@ import sys
 # =====================================================================
 try:
     import tests.test_ct01_categorias as ct01
-    import tests.test_ct04_validar_carrinho as ct02
-    
+    import tests.test_ct02_detalhes_produto as ct02
+
     # Descomente os imports abaixo conforme formos criando os novos arquivos:
     import tests.test_ct03_adicionar_carrinho as ct03
     import tests.test_ct04_validar_carrinho as ct04
@@ -38,7 +38,7 @@ def executar_hub_testes():
     try:
         # Teste padrão exigido no CT-01 (Laptops), lembrando, é importante digitar a categoria e o produto esperado, favor não esquecer.
         ct01.test_ct01_navegar_categoria(
-            categoria="Laptops", 
+            categoria="Laptops",
             produto_esperado="Sony vaio i5"
         )
         # Caso o analista de QA queira testar outra categoria com a mesma função, use o padrão a seguir:
@@ -60,7 +60,7 @@ def executar_hub_testes():
         print(f"[Falha no CT-02]: {e}")
 
     # -----------------------------------------------------------------
-    # CT-03: Adicionar Produto ao Carrinho (Futuro)
+    # CT-03: Adicionar Produto ao Carrinho
     # -----------------------------------------------------------------
     print("\n>>> [Executando] CT-03: Adicionar Produto ao Carrinho")
     try:
@@ -69,7 +69,7 @@ def executar_hub_testes():
         print(f"[Falha no CT-03]: {e}")
 
     # -----------------------------------------------------------------
-    # CT-04: Validação de Itens no Carrinho (Futuro)
+    # CT-04: Validação de Itens no Carrinho
     # -----------------------------------------------------------------
     print("\n>>> [Executando] CT-04: Validação de Itens no Carrinho")
     try:
